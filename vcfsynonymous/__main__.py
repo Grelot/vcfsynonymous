@@ -86,23 +86,22 @@ from Bio.Seq import Seq
 
 
 genomeFastaFile = "data_test/genomes/sar_genome_lgt6000.fasta"
-
+vcf = "data_test/diplodus_sargus_exon.vcf"
 genomeGff3File = "data_test/annotation/DSARv1_annotation.gff3"
 
 db = gffutils.create_db(genomeGff3File, dbfn='currentgff.db')
 fasta = pyfaidx.Fasta(genomeFastaFile)
 
 ## decompose exon sequence into codon
-for cds in db.features_of_type(['exon'], order_by='start'):
-    cdsSeq = cds.sequence(fasta)
-    frame=0
+for cds in db.features_of_type(['CDS','cds'], order_by='start'):
+    cdsSeq = cds.sequence(fasta)    
+    print(cds.start)
+    print(cds.end)
+    print(cds.seqid)
     cdsSeqStartCodon = cdsSeq.find('ATG')
     if(cdsSeqStartCodon != -1):
         print(cdsSeqStartCodon)
+        print(cdsSeqStartCodon+cds.start)
         coding = cdsSeq[cdsSeqStartCodon:]
         n = 3
         [coding[i:i+n] for i in range(0, len(coding), n)]
-    else:
-        frame+=1
-
-print(frame)
