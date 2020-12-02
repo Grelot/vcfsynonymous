@@ -128,9 +128,9 @@ from Bio.Seq import Seq
 import vcf
 import os
 
-genomeFastaFile = "data_test/genomes/sar_genome_lgt6000.fasta"
-vcfFile = "data_test/diplodus_sargus_exon.vcf"
-genomeGff3File = "data_test/annotation/DSARv1_annotation.gff3"
+#genomeFastaFile = "data_test/genomes/sar_genome_lgt6000.fasta"
+#vcfFile = "data_test/diplodus_sargus_exon.vcf"
+#genomeGff3File = "data_test/annotation/DSARv1_annotation.gff3"
 dbfnFile = 'currentgff.db'
 
 
