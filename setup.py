@@ -26,7 +26,7 @@ setuptools.setup(
 
      packages=setuptools.find_packages(),
 
-    install_requires=['argparse', 'numpy', 'biopython', 'bcbio-gff', 'pyfaidx', 'gffutils'],
+    install_requires=['argparse', 'numpy', 'biopython', 'bcbio-gff', 'pyfaidx', 'gffutils', 'PyVCF'],
 
      classifiers=[
 
