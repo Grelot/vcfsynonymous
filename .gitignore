@@ -1,3 +1,4 @@
 data_test/
 pypi_dist/
 currentgff.db
+*__pycache__*
