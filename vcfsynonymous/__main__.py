@@ -99,8 +99,8 @@ db = gffutils.create_db(genomeGff3File, dbfn=dbfnFile)
 ## read FASTA genome file
 fasta = pyfaidx.Fasta(genomeFastaFile)
 ## From the genome(GFF3, FASTA),
-## extract a list of CDS (coding sequences) objects
 cdsSeqList = dbfasta2CdsSeq(db, fasta)
+## extract a list of CDS (coding sequences) objects
 ## read VCF file
 vcf_reader = list(vcf.Reader(open(vcfFile, 'r')))
 ## check wether variant is within a CDS
