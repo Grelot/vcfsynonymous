@@ -1,13 +1,11 @@
 from Bio.Seq import Seq
-
+from VariantCodon.objets import CdsSeq
 
 
 def variant_position_within(coordsVar, coordsInterval):
     """
     check if coordsVars is within coordsInterval. Return 0
     """
-    print(coordsVar.POS)
-    print(coordsInterval.start, coordsInterval.end)
     if coordsVar.CHROM == coordsInterval.seqid:
         if coordsVar.POS >= coordsInterval.start:
             if coordsVar.POS <= coordsInterval.end:
@@ -17,8 +15,6 @@ def variant_position_within(coordsVar, coordsInterval):
         else:
             return(0)
     return(0)
-
-
 
 
 def is_synonymous(variant, cds):
@@ -36,10 +32,10 @@ def is_synonymous(variant, cds):
     codonAltSeq = Seq(''.join(codonAlt))
     aaRef = str(codonRefSeq.translate(table=1))
     aaAlt = str(codonAltSeq.translate(table=1))
-    print(codonVariant, "|||", codonRef, aaRef,"|", codonAlt, aaAlt)
+    #print(codonVariant, "|||", codonRef, aaRef,"|", codonAlt, aaAlt)
     if aaRef != aaAlt:
-        print("NONSYNONYME")
+        #print("NONSYNONYME")
         return(0)
     else:
-        print("SYNONYME")
+        #print("SYNONYME")
         return(1)
