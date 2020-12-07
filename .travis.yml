@@ -10,4 +10,4 @@ before_install:
   - pip3 install codecov
 install:
   - pip install -r requirements.txt  
-script: pytest # run tests
+script: PYTHONPATH="./vcfsynonymous" pytest # run tests
