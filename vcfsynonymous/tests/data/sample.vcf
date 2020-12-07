@@ -18,7 +18,7 @@ chrom1 27   2   T   C   .	PASS	.	GT:DP	0/0:50	0/1:50	0/1:50
 chrom2 14   3   C   T   .	PASS	.	GT:DP	1/1:50	0/1:50	0/1:50
 chrom3 17   4   G   C   .	PASS	.	GT:DP	0/0:50	0/0:50	0/1:50
 chrom3 172   5   T   C   .	PASS	.	GT:DP	0/1:50	0/0:50	0/1:50
-chrom3 174   6   T   C   .	PASS	.	GT:DP	0/0:50	0/0:50	0/1:50
+chrom3 174   6   G   A   .	PASS	.	GT:DP	0/0:50	0/0:50	0/1:50
 chrom4	42	7	G	T	.	PASS	.	GT:DP	0/0:45	0/1:105	1/1:65
 chrom1	2	8	T	G	.	PASS	.	GT:DP	0/0:45	0/1:105	1/1:65
 
