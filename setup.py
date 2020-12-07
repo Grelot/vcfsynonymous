@@ -3,8 +3,7 @@ import setuptools
 setuptools.setup(
 
     name='vcfsynonymous',
-    version='0.1.2',
-    scripts=['vcfsynonymous/__main.py__'] ,
+    version='0.1.2',    
     author="Pierre-Edouard GUERIN",
     author_email="pierre-edouard.guerin@cefe.cnrs.fr",
     description="Detect synonymous genetic variants in VCF",
