@@ -4,3 +4,4 @@ currentgff.db
 *__pycache__*
 dist/
 vcfsynonymous.egg-info/
+.eggs/
