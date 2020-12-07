@@ -11,9 +11,9 @@ def dbfasta2CdsSeq(db, fasta):
     """
     cdsSeqList = []
     for cds in db.features_of_type(['CDS','cds']):
-        print(cds.sequence(fasta))
-        print(cds.seqid)
-        print(cds.start, cds.end)
+        #print(cds.sequence(fasta))
+        #print(cds.seqid)
+        #print(cds.start, cds.end)
         cdsSeq = cds.sequence(fasta)
         cdsSeqStartCodon = cdsSeq.find('ATG') #seek codon start ATG in the CDS 
         if(cdsSeqStartCodon != -1):
