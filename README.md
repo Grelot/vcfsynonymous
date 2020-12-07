@@ -13,3 +13,13 @@ python3 vcfsynonymous --vcf vcfsynonymous/tests/data/sample.vcf \
  --genome vcfsynonymous/tests/data/genome.fasta \
  --annotation vcfsynonymous/tests/data/genome.gff3
 ```
+
+
+
+
+# upload package
+
+```
+python setup.py sdist
+twine upload dist/*
+```
