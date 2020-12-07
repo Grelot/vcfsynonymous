@@ -14,9 +14,9 @@ read VCF and select synonymous or non-synonymous coding variants
 # Get started
 
 ```
-python3 vcfsynonymous --vcf vcfsynonymous/tests/data/sample.vcf \
- --genome vcfsynonymous/tests/data/genome.fasta \
- --annotation vcfsynonymous/tests/data/genome.gff3
+python3 vcfsynonymous --vcf tests/data/sample.vcf \
+ --genome tests/data/genome.fasta \
+ --annotation tests/data/genome.gff3
 ```
 
 
@@ -25,6 +25,6 @@ python3 vcfsynonymous --vcf vcfsynonymous/tests/data/sample.vcf \
 # upload package
 
 ```
-python setup.py sdist
+python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
