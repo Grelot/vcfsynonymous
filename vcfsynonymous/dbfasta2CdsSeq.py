@@ -1,6 +1,6 @@
 import gffutils
 import pyfaidx
-from VariantCodon.objets import CdsSeq
+from objets import CdsSeq
 
 
 def dbfasta2CdsSeq(db, fasta):

@@ -1,3 +1,10 @@
+class FileName:
+    def __init__(self, genomeAnnotation, genomeFasta, vcf):
+        self.genomeAnnotation = genomeAnnotation
+        self.genomeFasta = genomeFasta
+        self.vcf = vcf
+
+
 class CdsSeq:
     def __init__(self, seqid, start, end, sequence):
         self.seqid = seqid

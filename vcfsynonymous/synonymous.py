@@ -1,5 +1,5 @@
 from Bio.Seq import Seq
-from VariantCodon.objets import CdsSeq
+from objets import CdsSeq
 
 
 def variant_position_within(coordsVar, coordsInterval):
