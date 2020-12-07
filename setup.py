@@ -1,15 +1,22 @@
-import setuptools
+import pathlib
+from setuptools import find_packages, setup
 
-setuptools.setup(
+README = ("README.md").read_text()
+
+
+setup(
 
     name='vcfsynonymous',
-    version='0.1.2',    
+    version='0.1.4',    
     author="Pierre-Edouard GUERIN",
+    scripts=['vcfsynonymous/__main__.py'] ,
     author_email="pierre-edouard.guerin@cefe.cnrs.fr",
     description="Detect synonymous genetic variants in VCF",
+    long_description=README,
+    long_description_content_type="text/markdown",
     licence="MIT",
     url="https://github.com/Grelot/vcfsynonymous",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     install_requires=['argparse', 'numpy', 'biopython', 'bcbio-gff', 'pyfaidx', 'gffutils', 'PyVCF'],
 
     classifiers=[
