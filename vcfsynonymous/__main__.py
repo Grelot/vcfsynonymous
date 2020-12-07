@@ -17,6 +17,15 @@
 #==============================================================================
 #
 #concept:
+#=======
+#
+#
+#usage:
+#=====
+#>python3 vcfsynonymous --vcf vcfsynonymous/tests/data/sample.vcf \
+#  --genome vcfsynonymous/tests/data/genome.fasta \
+# --annotation vcfsynonymous/tests/data/genome.gff3
+#
 #==============================================================================
 #MODULES
 #==============================================================================
