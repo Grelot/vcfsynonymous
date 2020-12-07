@@ -1,12 +1,9 @@
 import setuptools
 
-with open("doc/pypi_readme.md", "r") as fh:
-    long_description = fh.read()
-
 setuptools.setup(
 
     name='vcfsynonymous',
-    version='0.1.1',
+    version='0.1.2',
     scripts=['vcfsynonymous/__main.py__'] ,
     author="Pierre-Edouard GUERIN",
     author_email="pierre-edouard.guerin@cefe.cnrs.fr",
