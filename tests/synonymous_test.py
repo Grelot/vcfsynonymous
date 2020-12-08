@@ -49,7 +49,7 @@ class VariantCodonSynonymousTest(unittest.TestCase):
         test case function is_synonymous
         check non synonymous mutation at second codon-position
         """
-        non_synonymous_codon_second_pos = Mock(CHROM = "chrom3", POS=17, REF='G', ALT=['C']) ## variant.ID = 3
+        non_synonymous_codon_second_pos = Mock(CHROM = "chrom3", POS=17, REF='G', ALT=['C']) ## variant.ID = 4
         cdsSeq_non_synonymous_codon_second_pos = Mock(seqid="chrom3", start=10, end=18, \
             codons = ['ATG', 'CAG', 'TCT']) ## cdsSeqList[2]
         assert is_synonymous(non_synonymous_codon_second_pos, \
