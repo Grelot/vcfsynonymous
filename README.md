@@ -27,6 +27,24 @@ vcfsynonymous --vcf tests/data/sample.vcf \
 
 ___________________________________________________________
 
+## DEVELOPEMENT
+
+### download dev version
+
+```
+git clone git@github.com:Grelot/vcfsynonymous.git
+```
+
+### test package
+
+#### unit test
+
+```
+python -m pytest
+```
+
+#### real case test
+
 ```
 python -m vcfsynonymous --vcf tests/data/sample.vcf \
  --genome tests/data/genome.fasta \
@@ -34,8 +52,7 @@ python -m vcfsynonymous --vcf tests/data/sample.vcf \
  --output_prefix res
 ```
 
-
-### upload package
+#### build package
 
 ```
 pip3 uninstall vcfsynonymous
@@ -43,7 +60,27 @@ rm -rf build/
 rm -rf dist/
 rm -rf vcfsynonymous.egg-info/
 python setup.py sdist bdist_wheel
-pip3 install .
+```
 
+local installation
+```
+pip3 install .
+```
+
+#### upload pypi
+
+```
 twine upload dist/*
+```
+
+pypi installation
+
+```
+pip install vcfsynonymous
+```
+
+#### uninstall 
+
+```
+pip uninstall vcfsynonymous
 ```
