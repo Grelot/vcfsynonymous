@@ -10,4 +10,4 @@ before_install:
   - pip3 install codecov
 install:
   - pip install -r requirements.txt  
-script: PYTHONPATH="." pytest # run tests
+script: python -m pytest # run tests
