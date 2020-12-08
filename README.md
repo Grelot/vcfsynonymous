@@ -21,7 +21,8 @@ pip3 install vcfsynonymous
 ```
 vcfsynonymous --vcf tests/data/sample.vcf \
  --genome tests/data/genome.fasta \
- --annotation tests/data/genome.gff3
+ --annotation tests/data/genome.gff3 \
+ --output_prefix res
 ```
 
 
