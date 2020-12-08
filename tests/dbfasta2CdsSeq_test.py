@@ -7,8 +7,8 @@ import unittest
 import gffutils
 import pyfaidx
 ## Local applications import
-from objets import CdsSeq
-from dbfasta2CdsSeq import dbfasta2CdsSeq
+from vcfsynonymous.objets import CdsSeq
+from vcfsynonymous.dbfasta2CdsSeq import dbfasta2CdsSeq
 
 
 class VariantCodonTest(unittest.TestCase):

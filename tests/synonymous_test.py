@@ -5,9 +5,9 @@ import pickle
 import unittest
 from unittest.mock import Mock
 ## Local applications import
-from objets import CdsSeq
-from synonymous import variant_position_within
-from synonymous import is_synonymous
+from vcfsynonymous.objets import CdsSeq
+from vcfsynonymous.synonymous import variant_position_within
+from vcfsynonymous.synonymous import is_synonymous
 
 
 class VariantCodonSynonymousTest(unittest.TestCase):

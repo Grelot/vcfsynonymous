@@ -43,12 +43,12 @@ from Bio.Seq import Seq
 import vcf
 
 ## Local applications import
-from objets import CdsSeq
-from objets import FileName
-from dbfasta2CdsSeq import dbfasta2CdsSeq
-from synonymous import variant_position_within
-from synonymous import is_synonymous
-from arguments import parse_args
+from vcfsynonymous.objets import CdsSeq
+from vcfsynonymous.objets import FileName
+from vcfsynonymous.dbfasta2CdsSeq import dbfasta2CdsSeq
+from vcfsynonymous.synonymous import variant_position_within
+from vcfsynonymous.synonymous import is_synonymous
+from vcfsynonymous.arguments import parse_args
 
 
 #genomeFastaFile = "data_test/genomes/sar_genome_lgt6000.fasta"

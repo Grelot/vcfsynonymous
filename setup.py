@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='vcfsynonymous',
-    version='0.1.16',
+    version='0.1.19',
     author="Pierre-Edouard GUERIN",    
     author_email="pierre-edouard.guerin@cefe.cnrs.fr",
     description="Detect synonymous genetic variants in VCF",
@@ -18,8 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     license="MIT",
     url="https://github.com/Grelot/vcfsynonymous",   
-    packages=['vcfsynonymous'],
-    package_dir={'vcfsynonymous':'vcfsynonymous/'},
+    packages=find_packages(),
     install_requires=['argparse', 'numpy', 'biopython', 'bcbio-gff', 'pyfaidx', 'gffutils', 'PyVCF'],
     classifiers=[
          "Programming Language :: Python :: 3",
@@ -28,6 +27,10 @@ setup(
          "Programming Language :: Python :: 3.8",
          "License :: OSI Approved :: MIT License",
          "Operating System :: OS Independent"
-     ],
-    entry_points={ "console_scripts": ["vcfsynonymous=vcfsynonymous.__main__:main",  ]}
+    ],
+    entry_points={
+    'console_scripts': [
+        'vcfsynonymous=vcfsynonymous.__main__:main',
+    ],
+},  
 )

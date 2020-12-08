@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-from objets import FileName
+from vcfsynonymous.objets import FileName
 
 
 HELPER_TEXT ="""
