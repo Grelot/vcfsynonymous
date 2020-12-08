@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='vcfsynonymous',
-    version='0.1.19',
+    version='0.2.0',
     author="Pierre-Edouard GUERIN",    
     author_email="pierre-edouard.guerin@cefe.cnrs.fr",
     description="Detect synonymous genetic variants in VCF",
