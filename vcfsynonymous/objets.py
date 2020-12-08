@@ -1,8 +1,9 @@
 class FileName:
-    def __init__(self, genomeAnnotation, genomeFasta, vcf):
+    def __init__(self, genomeAnnotation, genomeFasta, vcf, outputPrefix):
         self.genomeAnnotation = genomeAnnotation
         self.genomeFasta = genomeFasta
         self.vcf = vcf
+        self.outputPrefix = outputPrefix
 
 
 class CdsSeq:

@@ -72,16 +72,19 @@ def main():
     ## read VCF file
     vcf_reader = list(vcf.Reader(open(fichiers.vcf, 'r')))
     ## check wether variant is within a CDS
+    vcf_writer_synonymous = vcf.Writer(open(fichiers.outputPrefix+'_synonymous.vcf', 'w'), vcf.Reader(open(fichiers.vcf, 'r')))
+    vcf_writer_non_synonymous = vcf.Writer(open(fichiers.outputPrefix+'_nonsynonymous.vcf', 'w'), vcf.Reader(open(fichiers.vcf, 'r')))
     for variant in vcf_reader:
         #print(variant.CHROM, variant.POS, variant.REF, variant.ALT[0])
-        i=0
         for cdsSeq in cdsSeqList:        
             if variant_position_within(variant, cdsSeq):
-                print("cds #", i)
-                print(variant.CHROM,variant.POS, "|", cdsSeq.seqid, cdsSeq.start, cdsSeq.end)
-                is_synonymous(variant, cdsSeq)
+                #print("cds #", i)
+                #print(variant.CHROM,variant.POS, "|", cdsSeq.seqid, cdsSeq.start, cdsSeq.end)
+                if is_synonymous(variant, cdsSeq):                    
+                    vcf_writer_synonymous.write_record(variant)
+                else:
+                    vcf_writer_non_synonymous.write_record(variant)               
                 break
-            i+=1
 
 if __name__ == '__main__':
     main()

@@ -20,17 +20,17 @@ HELPER_TEXT ="""
        |___/                       |___/   
 
 
-Pierre-Edouard GUERIN, Stephanie MANEL (CNRS, EPHE, Sorbonne University)
+Pierre-Edouard GUERIN, Laura Benestan, Stephanie MANEL
+CNRS, EPHE, Sorbonne University, Montpellier, France
 Founded by biodiversa RESERVEBENEFIT 2017-2020
-version 0.1 "Haricot Dinde" november 2020
+version 0.2 "Kidney Bean" november 2020
 
 Usage:
-> python3 vcfsynonymous [options]	
+> python3 vcfsynonymous [options]
 For help:
 > python3 vcfsynonymous --help
 
 """
-
 
 
 def parse_args(usage=HELPER_TEXT):
@@ -39,11 +39,13 @@ def parse_args(usage=HELPER_TEXT):
         sys.exit(0)
     else:
         parser = argparse.ArgumentParser(description='VCFsynonymous - detect synonymous genetic variants in VCF')
+        parser.add_argument("-o","--output_prefix", type=str, help='prefix of the two output VCF files such as [PREFIX]_synonymous.vcf and [PREFIX]_nonsynonymous.vcf')
         parser.add_argument("-f","--vcf", type=str, help='path of the variant Calling File (VCF) with variants you want to determine synonymous or non-synonymous')
         parser.add_argument("-g","--genome", type=str, help='path of the genome sequences FASTA file')
         parser.add_argument("-a","--annotation",type=str, help='path of the genome annotation GFF3 file')
     args = parser.parse_args()
     fichiers = FileName(vcf =  args.vcf,
                         genomeFasta = args.genome,
-                        genomeAnnotation = args.annotation)
+                        genomeAnnotation = args.annotation,
+                        outputPrefix = args.output_prefix)
     return fichiers
