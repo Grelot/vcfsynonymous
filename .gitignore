@@ -5,3 +5,4 @@ currentgff.db
 dist/
 vcfsynonymous.egg-info/
 .eggs/
+build/
