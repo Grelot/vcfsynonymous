@@ -18,8 +18,6 @@ pip3 install vcfsynonymous
 
 ## GET STARTED
 
-
-
 ```
 python3 vcfsynonymous --vcf tests/data/sample.vcf \
  --genome tests/data/genome.fasta \
