@@ -19,7 +19,7 @@ pip3 install vcfsynonymous
 ## GET STARTED
 
 ```
-python3 vcfsynonymous --vcf tests/data/sample.vcf \
+vcfsynonymous --vcf tests/data/sample.vcf \
  --genome tests/data/genome.fasta \
  --annotation tests/data/genome.gff3
 ```
@@ -27,6 +27,12 @@ python3 vcfsynonymous --vcf tests/data/sample.vcf \
 
 ___________________________________________________________
 
+```
+python -m vcfsynonymous --vcf tests/data/sample.vcf \
+ --genome tests/data/genome.fasta \
+ --annotation tests/data/genome.gff3 \
+ --output_prefix res
+```
 
 
 ### upload package
